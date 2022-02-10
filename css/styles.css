@@ -1,0 +1,31 @@
+/* This will import the font to be used in the css - therefore any @font-face rules go at the top */
+/* 1. When copy pasting the @font-face rule, change the relative path to the font folder */
+/* 2. Add font-display: swap to avoid FOIT (flash of invisible font) */
+@font-face {
+    font-family: 'milkshakeregular';
+    src: url('../fonts/milkshake-webfont.woff2') format('woff2'),
+         url('../fonts/milkshake-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ******************* generic css for all screens **************** */
+h1,
+h2 {
+    font-family: sans-serif;
+}
+
+/* On a desktop screen we can load the web fonts without peformance issues */
+@media only screen and (min-width: 1024px) {
+    h1 {
+        font-family: 'milkshakeregular';
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-family: 'milkshakeregular';
+        font-size: 2.5rem;
+    }
+}
+
